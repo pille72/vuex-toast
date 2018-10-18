@@ -3,6 +3,7 @@
     <toast-transition>
       <div class="toast-message" :class="messageTypeClass(m)" v-for="m in messages" :key="m.id" role="note">
         <div class="toast-message-text" v-if="html" v-html="m.text"></div>
+        <div class="toast-message-text" v-else-if="!html && translate">{{$t(m.text)}}</div>
         <div class="toast-message-text" v-else>{{ m.text }}</div>
         <button class="toast-button" aria-label="Close" type="button" @click="close(m.id)"></button>
       </div>
@@ -28,6 +29,7 @@ export default {
       default: ''
     },
 
+    translate: Boolean,
     html: Boolean
   },
 
