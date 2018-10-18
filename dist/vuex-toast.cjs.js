@@ -1,5 +1,5 @@
 /*!
- * vuex-toast v0.1.4
+ * vuex-toast v0.1.5
  * https://github.com/ktsn/vuex-toast
  *
  * @license
