@@ -97,7 +97,7 @@ var DefaultTransition = {
 
 var Toast = { render: function render() {
     var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { staticClass: "toast", class: _vm.positionClass }, [_c('toast-transition', _vm._l(_vm.messages, function (m) {
-      return _c('div', { key: m.id, staticClass: "toast-message", class: _vm.messageTypeClass(m), attrs: { "role": "note" } }, [_vm.html ? _c('div', { staticClass: "toast-message-text", domProps: { "innerHTML": _vm._s(m.text) } }) : !_vm.html && _vm.translate ? _c('div', { staticClass: "toast-message-text" }, [_vm._v(_vm._s(_vm.$t(m.text)))]) : _c('div', { staticClass: "toast-message-text" }, [_vm._v(_vm._s(m.text))]), _vm._v(" "), _c('button', { staticClass: "toast-button", attrs: { "aria-label": "Close", "type": "button" }, on: { "click": function click($event) {
+      return _c('div', { key: m.id, staticClass: "toast-message", class: _vm.messageTypeClass(m), attrs: { "role": "note" } }, [_vm.html ? _c('div', { staticClass: "toast-message-text", domProps: { "innerHTML": _vm._s(m.text) } }) : !_vm.html && _vm.$t && _vm.translate ? _c('div', { staticClass: "toast-message-text" }, [_vm._v(_vm._s(_vm.$t(m.text)))]) : _c('div', { staticClass: "toast-message-text" }, [_vm._v(_vm._s(m.text))]), _vm._v(" "), _c('button', { staticClass: "toast-button", attrs: { "aria-label": "Close", "type": "button" }, on: { "click": function click($event) {
             _vm.close(m.id);
           } } })]);
     }))], 1);
