@@ -1,5 +1,4 @@
 node_modules/
 
-/dist/
 /examples/*/__build__.js
 /.tmp/
